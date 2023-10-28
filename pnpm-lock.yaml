@@ -7,7 +7,7 @@ settings:
 devDependencies:
   '@builder.io/qwik':
     specifier: ^1.2.15
-    version: 1.2.15(undici@5.26.0)
+    version: 1.2.15(undici@5.26.2)
   '@builder.io/qwik-city':
     specifier: ^1.2.15
     version: 1.2.15
@@ -36,8 +36,8 @@ devDependencies:
     specifier: ^5.2.2
     version: 5.2.2
   undici:
-    specifier: ^5.26.0
-    version: 5.26.0
+    specifier: ^5.26.2
+    version: 5.26.2
   vite:
     specifier: ^4.4.11
     version: 4.4.11(@types/node@20.8.4)
@@ -68,7 +68,7 @@ packages:
       - supports-color
     dev: true
 
-  /@builder.io/qwik@1.2.15(undici@5.26.0):
+  /@builder.io/qwik@1.2.15(undici@5.26.2):
     resolution: {integrity: sha512-5aiU1VL4quzEd8pGdeFfJOiN/SUYr6wu1FLEX3piqBxoJL+j8H/3jZeOl4TUZawNNYWZOckH74a3VzAXai/4ZA==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     hasBin: true
@@ -76,7 +76,7 @@ packages:
       undici: ^5.14.0
     dependencies:
       csstype: 3.1.2
-      undici: 5.26.0
+      undici: 5.26.2
     dev: true
 
   /@esbuild/android-arm64@0.18.20:
@@ -2906,8 +2906,8 @@ packages:
     resolution: {integrity: sha512-Ga1jfYwRn7+cP9v8auvEXN1rX3sWqlayd4HP7OKk4mZWylEmu3KzXDUGrQUN6Ol7qo1gPvB2e5gX6udnyEPgdA==}
     dev: true
 
-  /undici@5.26.0:
-    resolution: {integrity: sha512-MLqGMyaJk2ubSl7FrmWuV7ZOsYWmdF7gcBHDRxm4AR8NoodQhgy3vO/D1god79HoetxR0uAeVNB65yj2lNRQnQ==}
+  /undici@5.26.2:
+    resolution: {integrity: sha512-a4PDLQgLTPHVzOK+x3F79/M4GtyYPl+aX9AAK7aQxpwxDwCqkeZCScy7Gk5kWT3JtdFq1uhO3uZJdLtHI4dK9A==}
     engines: {node: '>=14.0'}
     dependencies:
       '@fastify/busboy': 2.0.0
