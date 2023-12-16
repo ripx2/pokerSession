@@ -4,31 +4,36 @@ import {
   type SocketCallback,
   SocketEventHandler,
 } from '../../sockets'
-import type { UserDisconnectedFromMeetingDto } from '~/backend/application/dtos/user-disconnected-from-meeting-dto'
-import type { MeetingWithAuthInformationDto } from '@application'
 import { Logger } from '../../logger'
 import { UserDisconnectedFromMeeting } from '~/backend/application/use-cases/user-disconnected-from-meeting'
+import {
+  UserDisconnectedFromMeetingDtoValidator,
+  type UserDisconnectedFromMeetingDto,
+} from '@application'
 
 @singleton()
 export class UserDisconnectedFromMeetingHandler extends SocketEventHandler<
   UserDisconnectedFromMeetingDto,
-  MeetingWithAuthInformationDto
+  void
 > {
   constructor(
     private userDisconnectedFromMeeting: UserDisconnectedFromMeeting
   ) {
     super(new Logger(UserDisconnectedFromMeetingHandler))
   }
-  protected async handle(
+  protected handle(
     socket: GenericSocket,
     request: UserDisconnectedFromMeetingDto,
-    callback: SocketCallback<MeetingWithAuthInformationDto>
+    callback: SocketCallback<void>
   ): Promise<void> {
     return this.handleWithUseCase({
       socket,
       request,
       callback,
+      requestValidator: UserDisconnectedFromMeetingDtoValidator,
       useCase: this.userDisconnectedFromMeeting,
     })
   }
 }
+
+

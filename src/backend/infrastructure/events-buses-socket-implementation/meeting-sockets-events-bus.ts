@@ -33,7 +33,7 @@ export class MeetingSocketsEventsBus extends MeetingEventsBus {
     } else if (event instanceof UserDisconnectedFromMeetingEvent) {
       room.emit('ParticipantDisconnected', {
         meetingId: event.meetingId(),
-        participantId: event.participantId(),
+        participantId: event.meetingParticipant(),
       })
     } else {
       throw new Error(
